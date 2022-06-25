@@ -62,10 +62,14 @@ sumOfWeights = tomatoWeight + mozzarellaWeight + saladWeight
 sumOfPrices = tomatoCountedPrice + mozzarellaCountedPrice + saladCountedPrice
 
 print(sumOfCalories)
-print(f"{tomato:<15}, kalorie:{tomatoCountedCalories:7.2f}, b: {tomatoCountedProteins:5.2f}, t: {tomatoCountedFat:5.2f}, w: {tomatoCountedCarbo:5.2f}, waga: {str(tomatoWeight) + ' g':5}, koszt: {str(tomatoCountedPrice):<5} {currency}")
-print(f"{mozzarella:<15}, kalorie:{mozzarelaCountedCalories:7.2f}, b: {mozzarellaCountedProteins:5.2f}, t: {mozzarelaCountedFat:5.2f}, w: {mozzarellaCountedCarbo:5.2f}, waga: {str(mozzarellaWeight) + ' g':5}, koszt: {str(mozzarellaCountedPrice):<5} {currency}")
-print(f"{salad:<15}, kalorie:{saladCountedCalories:7.2f}, b: {saladCountedProteins:5.2f}, t: {saladCountedFat:5.2f}, w: {saladCountedCarbo:5.2f}, waga: {str(saladWeight) + ' g':5}, koszt: {str(saladCountedPrice):<5} {currency}")
-print("="*100)
-#SUMA           , kalorie:  918.00, b:  65.50, t:  61.75, w: 27.50,waga:  1025 g, koszt:  15.55 PLN
-                                                                                                                                                                  #{str(sumOfPrices) +' '+ currency:5}")
-print(f"{sum:<15}, kalorie:{sumOfCalories:7.2f}, b: {sumOfProteins:5.2f}, t: {sumOfFats:5.2f}, w: {sumOfCarbos:5.2f}, waga:{str(sumOfWeights) + ' g':5}, koszt: {str(sumOfPrices):<5} {currency}")
+print(f"{tomato:<15}, kalorie:{tomatoCountedCalories:7.2f}, b: {tomatoCountedProteins:5.2f}, t: {tomatoCountedFat:5.2f},\
+ w: {tomatoCountedCarbo:5.2f}, waga: {str(tomatoWeight) + ' g':5}, koszt: {str(tomatoCountedPrice):<5} {currency}")
+print(f"{mozzarella:<15}, kalorie:{mozzarelaCountedCalories:7.2f}, b: {mozzarellaCountedProteins:5.2f}, t: {mozzarelaCountedFat:5.2f},\
+ w: {mozzarellaCountedCarbo:5.2f}, waga: {str(mozzarellaWeight) + ' g':5}, koszt: {str(mozzarellaCountedPrice):<5} {currency}")
+print(f"{salad:<15}, kalorie:{saladCountedCalories:7.2f}, b: {saladCountedProteins:5.2f}, t: {saladCountedFat:5.2f}, \
+w: {saladCountedCarbo:5.2f}, waga: {str(saladWeight) + ' g':5}, koszt: {str(saladCountedPrice):<5} {currency}")
+print("="*93)
+
+
+print(f"{sum:<15}, kalorie:{sumOfCalories:7.2f}, b: {sumOfProteins:5.2f}, t: {sumOfFats:5.2f}, w: {sumOfCarbos:5.2f},\
+ waga:{str(sumOfWeights) + ' g':5}, koszt: {str(sumOfPrices):<5} {currency}")
