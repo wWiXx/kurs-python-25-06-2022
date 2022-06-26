@@ -1,0 +1,4 @@
+x = b"za\xbf\xf3\xb3\xe6 g\xea\xb6l\xb1 ja\xbc\xf1".decode("ISO-8859-2")
+
+
+print(x)
