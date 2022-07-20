@@ -1,0 +1,16 @@
+INFO:kalkulator_03:informacja
+WARNING:kalkulator_03:Ostrze¿enie
+ERROR:kalkulator_03:Error -b³¹d
+CRITICAL:kalkulator_03:B³¹d krytyczny
+INFO:kalkulator_03:Wywo³anie suma z argumentami: 2 4
+INFO:kalkulator_03:Wywo³anie odejmowanie z argumentami: 2 4
+INFO:kalkulator_03:Wywo³anie suma z argumentami: 3 5
+INFO:kalkulator_03:Wywo³anie odejmowanie z argumentami: 3 5
+INFO:kalkulator_03:informacja
+WARNING:kalkulator_03:Ostrze¿enie
+ERROR:kalkulator_03:Error -b³¹d
+CRITICAL:kalkulator_03:B³¹d krytyczny
+INFO:kalkulator_03:Wywo³anie suma z argumentami: 2 4
+INFO:kalkulator_03:Wywo³anie odejmowanie z argumentami: 2 4
+INFO:kalkulator_03:Wywo³anie suma z argumentami: 3 5
+INFO:kalkulator_03:Wywo³anie odejmowanie z argumentami: 3 5
