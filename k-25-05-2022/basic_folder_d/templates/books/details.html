@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}{{book.tytul}}{% endblock %}
+{% block content %}
+<table class="table table-stripped">
+    <tr>
+        <th>Autor</th>
+        <td>{{book.author | title}}</td>
+    </tr>
+    <tr>
+        <th>Tytuł</th>
+        <td>{{book.title | title}}</td>
+    </tr>
+    <tr>
+        <th>Opis</th>
+        <td>{{book.description }}</td>
+    </tr>
+    <tr>
+        <th>Rok wydania</th>
+        <td>{{book.year }}</td>
+    </tr>
+    <tr>
+        <th>Ilość stron</th>
+        <td>{{book.pages }}</td>
+    </tr>
+</table>
+
+{% endblock %}

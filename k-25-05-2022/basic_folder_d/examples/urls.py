@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from books.views import listview
 from posts.views import listview as postslistview
@@ -22,10 +22,10 @@ from main.views import homepage, greetings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", homepage),
-    path("greetings/", greetings),
-    path("books/", listview),
-    path("posts/", postslistview),
+    path("", include("main.urls")),
+    # można tak bardzo ogolnie przerzucic szukanie do innego urla
+    path("", include("books.urls")),
+    # można dać przedrostek - wspolny dal wszystkich wzorcow
+    # z urls ktory inkludujemy
+    path("posts", include("posts.urls")),
 ]
-
-

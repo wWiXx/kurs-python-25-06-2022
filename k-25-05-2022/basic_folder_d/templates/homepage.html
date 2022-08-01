@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load books_extras %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1> Homepage</h1>
+<p> Szablon z folderu template</p>
+
+{{ dane }}
+
+{% for el in dane %}
+    <p>{{ el }}</p>
+{% endfor %}
+{{'Jakis tekst' | upper }}
+<br>
+{{'Ala ma kota i kot ma Alę' | upper |truncatewords:"3" }}
+<br>
+{{a_list | join:"-" }}
+<br>   
+{{'Ala ma kota i kot ma Alę' | to_lower }}
+<br>
+{{'Ala ma kota i kot ma Alę' | to_lower | cut:"ala" }}
+<br>
+{% current_time %}
+{% endblock %}

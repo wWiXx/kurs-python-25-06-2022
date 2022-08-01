@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Posts{% endblock %}
+{% block content %}
+<h1> Postspage</h1>
+<p> Szablon z folderu template</p>
+
+{{ dane }}
+
+{% for el in dane %}
+    <p>{{ el }}</p>
+{% endfor %}
+{% endblock %}

@@ -5,4 +5,8 @@ from django.shortcuts import render
 
 
 def listview(request):
-    return HttpResponse("Lista postów")
+    return render(
+        request,
+        "posts/postspage.html",
+        {"dane": "Lista Postów"},
+    )
