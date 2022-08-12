@@ -10,7 +10,7 @@ faker = Faker("pl_PL")
 
 
 @dataclass
-class Book:
+class BookObject:
     id: int
     title: str
     description: str
@@ -26,11 +26,11 @@ class Book:
         return self.id, self.title, self.description, self.author, self.year, self.pages, self.slug
 
 
-def generate_books(n: int) -> List[Book]:
+def generate_books(n: int) -> List[BookObject]:
     books = []
 
     for i in range(1, n + 1):
-        books.append(Book(
+        books.append(BookObject(
             id=i,
             title=faker.text(30),
             description=faker.text(400),
@@ -41,7 +41,7 @@ def generate_books(n: int) -> List[Book]:
     return books
 
 
-def export_to_csv(books: List[Book], f_name: str = None) -> Path:
+def export_to_csv(books: List[BookObject], f_name: str = None) -> Path:
     if not f_name:
         f_name = "data/data.csv"
     path = Path(f_name)
@@ -53,7 +53,7 @@ def export_to_csv(books: List[Book], f_name: str = None) -> Path:
     return path
 
 
-def read_from_csv(f_name: Path | str) -> List[Book]:
+def read_from_csv(f_name: Path | str) -> List[BookObject]:
     if type(f_name) is str:
         f_name = Path(f_name)
     data = []
@@ -63,7 +63,7 @@ def read_from_csv(f_name: Path | str) -> List[Book]:
             if len(row) != 0:
                 id, title, description, author, year, pages, slug = row
                 id, year, pages = int(id), int(year), int(pages)
-                book = Book(id, title, description, author, year, pages, slug)
+                book = BookObject(id, title, description, author, year, pages, slug)
                 data.append(book)
         return data
 

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'main',
     'books',
     'posts',
+    'articles.apps.ArticlesConfig',
 ]
 
 if DEBUG:

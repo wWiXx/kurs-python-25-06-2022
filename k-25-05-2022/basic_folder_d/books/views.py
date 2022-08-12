@@ -13,7 +13,13 @@ allbooks = [
 
 
 def listview(request):
-    books = book_service.get_all_books()
+    print(request.GET)
+    q = request.GET.get("q")
+    print(q)
+    if q:
+        books = book_service.filter(q=q)
+    else:
+        books = book_service.get_all_books()
     return render(
         request,
         "books/bookspage.html",
